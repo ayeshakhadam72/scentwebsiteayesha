@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <header class="bg-white">
+    <div class="bg-black">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global ">
+      <div class="flex lg:flex-1 ">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Home</span>
+          <h2 class="text-white font-semibold text-3xl customfont">Scent</h2>
+          <!-- <img class="h-8 w-auto" src="images/logo-dark-a.png" alt=""> -->
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+                <!--
+                'Product' flyout menu, show/hide based on flyout menu state.
+      
+                Entering: "transition ease-out duration-200"
+                  From: "opacity-0 translate-y-1"
+                  To: "opacity-100 translate-y-0"
+                Leaving: "transition ease-in duration-150"
+                  From: "opacity-100 translate-y-0"
+                  To: "opacity-0 translate-y-1"
+              -->
+      <div class="hidden lg:flex lg:gap-x-12">
+        <div class="relative">
+          <button type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold text-white"
+            aria-expanded="false">
+            HOME
+            <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+              data-slot="icon">
+              <path fill-rule="evenodd"
+                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+
+
+
+
+        </div>
+
+        <a href="#" class="text-sm/6 font-semibold text-white">ABOUT</a>
+        <a href="#" class="text-sm/6 font-semibold text-white">MODELS</a>
+        <a href="#" class="text-sm/6 font-semibold text-white">PORTFOLIO</a>
+        <a href="#" class="text-sm/6 font-semibold text-white">BLOG</a>
+        <a href="#" class="text-sm/6 font-semibold text-white">SESSIONS</a>
+        <a href="#" class="text-sm/6 font-semibold text-white">TESTIMONIALS</a>
+        <a href="#" class="text-sm/6 font-semibold text-white">CONTACT</a>
+      </div> 
+      <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+      </div> -->
+    </nav></div>
+    <!-- <div class="imagebg "
+      style=" background-image: url(http://coffeecreamthemes.com/themes/scent/wordpress/wp-content/uploads/2014/05/Sexy-Dancer-Slowly-Touching-2.webmsd.webm); background-position: center; background-size: cover; background-repeat: no-repeat; height: 665px">
+      <div class="flex justify-left items-center h-full w-full ">
+        <div class="pl-10 2xl:pl-44">
+          <h2 class="bg-black text-white text-2xl font-bold p-2 w-fit lg:p-3 lg:text-4xl ">NOW AVAILABLE</h2>
+          <p class="py-2 text-3xl text-black lg:py-4 md:text-4xl lg:text-7xl ">EXCLUSIVE <span
+              class=" font-extrabold  ">MERCH</span> </p>
+          <button class="bg-red-600 text-white text-sm px-8 py-3   lg:px-12 lg:py-4 lg:text-md">SHOP NOW</button>
+        </div>
+      </div>
+      </div> -->
+     <!-- Mobile menu, show/hide based on menu open state.  -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10 d-non " style="display: none;"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          style="display: none;">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-8 w-auto" src="images/logo-dark-a.png" alt="">
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <div class="-mx-3">
+                  <button type="button"
+                    class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    aria-controls="disclosure-1" aria-expanded="false">
+                  Home
+                    <!--
+                        Expand/collapse icon, toggle classes based on menu open state.
+      
+                        Open: "rotate-180", Closed: ""
+                      -->
+                    <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                      data-slot="icon">
+                      <path fill-rule="evenodd"
+                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                  <!-- 'Product' sub-menu, show/hide based on menu state. -->
+
+
+                </div>
+                <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">ABOUT</a>
+                <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">MODELS</a>
+                <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">PORTFOLIO</a>
+                  <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">BLOG</a>
+                  <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">SESSIONS</a>
+                  <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">TESTIMONIALS</a>
+                  <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">CONTACT</a>
+              </div>
+              <div class="py-6">
+                <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log
+                  in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- background -->
+   <div class="w-full relative">
+    <div class="w-full h-screen" >
+      <video class="w-full h-screen object-cover " loop autoplay muted src="images/Sexy-Dancer-Slowly-Touching-2.webmsd.webm"></video>
+      <!-- <video poster="http://coffeecreamthemes.com/themes/scent/wordpress/wp-content/uploads/2014/05/cover.jpg" loop="" autoplay="" muted="">
+				<source src="http://coffeecreamthemes.com/themes/scent/wordpress/wp-content/uploads/2014/05/Sexy-Dancer-Slowly-Touching-2.webmsd.webm" type="video/webm">		<source src="http://coffeecreamthemes.com/themes/scent/wordpress/wp-content/uploads/2014/05/Sexy-Dancer-Slowly-Touching-2.mp4.mp4" type="video/mp4">	</video> -->
+    </div>
+    <div class="absolute top-[30%] left-[10%] md:top-[40%] md:left-[45%] text-white text-center ">
+      <h2 class="text-2xl font-semibold">WELCOME TO</h2>
+      <h1  class="text-8xl font-semibold">SCENT</h1>
+      <p class="text-2xl">A PROFESSIONAL MODEL AGENCY</p>
+      <button class=" text-white border-white border-2 px-12 py-2 mt-5 text-xl font-semibold">BEGIN</button>
+    </div>
+   </div>
+   <!--  ...................................sectio 2 about us -->
+     <div class="bg-[#181818] w-full">
+      <div class="w-[90%] 2xl:w-[70%]  mx-auto  2xl:mx-auto">
+<div class="pt-20 pb-10 border-b-2 border-gray-600 w-[100%]  text-center ">
+
+<h2 class="text-3xl text-white font-semibold ">  ABOUT US</h2>
+<p class="text-2xl text-[#807154] pt-3 font-semibold">Everybody Has a Story</p>
+</div>
+<div class="text-center mt-[-19px]">
+   <i   class="fa fa-bookmark text-xl text-[#807154] " style="font-size: 35px;"></i>
+  </div>
+
+   <div class="py-10 text-white text-center">
+    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat perferendis esse soluta recusandae, optio, numquam fugit quia vel explicabo odit distinctio eius aperiam maxime neque rerum qui quis, nobis mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat perferendis esse soluta recusandae, optio, numquam fugit quia vel explicabo odit distinctio eius aperiam maxime neque rerum qui quis, nobis mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et? Repellat perferendis esse soluta recusandae, optio, numquam fugit quia vel explicabo odit distinctio eius aperiam maxime neque rerum qui quis, nobis mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et?</p>
+   </div>
+   <!-- flex imgs -->
+<div class="sm:flex justify-center sm:gap-10 sm:flex-wrap pb-10 ">
+<div> 
+  <div class="flex justify-center"><img class="text-center" src="images/team1.jpg" alt=""></div>
+  <div class="text-white text-center pt-4 ">
+<h2 class=" text-xl">JANE DOE</h2>
+<P class="text-gray-400 pb-4 ">Owner</P>
+</div>
+</div>
+<!-- 2 -->
+<div> 
+  <div class="flex justify-center"><img src="images/team2.jpg" alt=""></div>
+  <div class="text-white text-center pt-4 ">
+    <h2 class="text-xl">JANE DOE</h2>
+    <P class="text-gray-400 pb-4">Owner</P>
+    </div>
+</div>
+<!-- 3 -->
+<div> 
+  <div class="flex justify-center"><img src="images/team3.jpg" alt=""></div>
+  <div class="text-white text-center pt-4 ">
+    <h2 class="text-xl">JANE DOE</h2>
+    <P class="text-gray-400 pb-4">Owner</P>
+    </div>
+</div>
+<!-- 4 -->
+<div>
+  <div class="flex justify-center"><img src="images/team4.jpg" alt=""></div> 
+  <div class="text-white text-center pt-4 ">
+    <h2 class="text-xl">JANE DOE</h2>
+    <P class="text-gray-400 pb-4">Owner</P>
+    </div>
+</div>
+
+</div>
+
+     </div>
+    </div>
+
+    <!-- section 3 Our models  -->
+    
+      <div class="" style="background-image:linear-gradient(rgba(25, 0, 0, 0.7), rgba(0, 0, 5, 0.7), rgba(7, 8, 18, 0.7), rgba(0, 0, 0, 0.7)),   url(images/parallax1.jpg); background-position: center; background-repeat: no-repeat;  background-size: cover;">
+        <!--  -->
+        <div class="w-full pt-20">
+          <div class="w-[90%] 2xl:w-[70%]  mx-auto ">
+    <div class="pt-20 pb-10 border-b-2 border-gray-600 w-[100%]  text-center ">
+    
+    <h2 class="text-3xl text-white font-semibold ">  OUR MODELS</h2>
+    <p class="text-2xl text-[#807154] pt-3 font-semibold">Everybody Has a Story</p>
+    </div>
+    <div class="text-center mt-[-19px]">
+       <i   class="fa fa-user text-xl text-[#807154] " style="font-size: 35px;"></i>
+      </div>
+    
+       <div class="py-10 text-white text-center">
+        <p class="text-sm">Mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat perferendis esse soluta recusandae, optio, numquam fugit quia vel explicabo odit distinctio eius aperiam maxime neque rerum qui quis, nobis mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et? Repellat perferendis esse soluta recusandae, optio, numquam fugit quia vel explicabo odit distinctio eius aperiam maxime neque rerum qui quis, nobis mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et?</p>
+       </div>
+      
+   <!-- sextion images  -->
+    <div class="pb-20">
+      <h2 class="text-center text-2xl text-white py-10">All Men Woman</h2>
+    <div class="flex flex-wrap justify-center gap-3">
+      <div class="relative confusingflex ">
+<div > 
+  <img style=" object-fit: cover; filter: grayscale(100%); " src="images/woman1-big-186x186.jpg" alt="">
+</div>
+<div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0 "><h2>Cameron Cruise</h2></div>
+</div>
+<!-- 2 -->
+<div class="relative confusingflex">
+  <div class=""> 
+    <img src="images/woman1-big-186x186.jpg" alt="">
+  </div>
+  <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+  </div>
+  <!-- 3 -->
+  <div class="relative confusingflex">
+    <div class=" "> 
+      <img src="images/woman1-big-186x186.jpg" alt="">
+    </div>
+    <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+    </div>
+    <!-- 4 -->
+    <div class="relative confusingflex">
+      <div class=""> 
+        <img src="images/woman1-big-186x186.jpg" alt="">
+      </div>
+      <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+      </div>
+      <!-- 5 -->
+      <div class="relative confusingflex">
+        <div class=""> 
+          <img src="images/woman1-big-186x186.jpg" alt="">
+        </div>
+        <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+        </div>
+        <!-- 6 -->
+        <div class="relative confusingflex">
+          <div class=" "> 
+            <img src="images/woman1-big-186x186.jpg" alt="">
+          </div>
+          <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+          </div>
+          <!-- 2 -->
+          <div class="relative confusingflex">
+            <div class=""> 
+              <img src="images/woman1-big-186x186.jpg" alt="">
+            </div>
+            <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+            </div>
+            <!-- 3 -->
+            <div class="relative confusingflex">
+              <div class=" "> 
+                <img src="images/woman1-big-186x186.jpg" alt="">
+              </div>
+              <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+              </div>
+              <!-- 4 -->
+              <div class="relative confusingflex">
+                <div class=""> 
+                  <img src="images/woman1-big-186x186.jpg" alt="">
+                </div>
+                <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+                </div>
+                <!-- 5 -->
+                <div class="relative confusingflex">
+                  <div class=""> 
+                    <img src="images/woman1-big-186x186.jpg" alt="">
+                  </div>
+                  <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+                  </div>
+                  <!-- 6 -->
+                  <div class="relative confusingflex">
+                    <div class=" "> 
+                      <img src="images/woman1-big-186x186.jpg" alt="">
+                    </div>
+                    <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="relative confusingflex">
+                      <div class=""> 
+                        <img src="images/woman1-big-186x186.jpg" alt="">
+                      </div>
+                      <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+                      </div>
+                      <!-- 3 -->
+                      <div class="relative confusingflex">
+                        <div class=" "> 
+                          <img src="images/woman1-big-186x186.jpg" alt="">
+                        </div>
+                        <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="relative confusingflex">
+                          <div class=""> 
+                            <img src="images/woman1-big-186x186.jpg" alt="">
+                          </div>
+                          <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+                          </div>
+                          <!-- 5 -->
+                          <div class="relative confusingflex">
+                            <div class=""> 
+                              <img src="images/woman1-big-186x186.jpg" alt="">
+                            </div>
+                            <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+                            </div>
+                            <!-- 6 -->
+                            <div class="relative confusingflex">
+                              <div class=" "> 
+                                <img src="images/woman1-big-186x186.jpg" alt="">
+                              </div>
+                              <div class="absolute bg-black text-white p-2 text-sm top-[77%] bottom-0"><h2>Cameron Cruise</h2></div>
+                              </div>
+                    
+<!-- <style>
+  .confusingflex{
+    flex: 1 1 16%;
+
+  }
+</style> -->
+    </div>
+  </div>
+    <!--  -->
+         </div>
+        </div>
+        <!--  -->
+      </div>
+    <!-- blog -->
+    <div class="w-full  bg-[#181818]">
+      <div class="w-[90%] 2xl:w-[70%]  mx-auto ">
+    <div class="pt-20  pb-10 border-b-2 border-gray-600 w-[100%]  text-center ">
+    
+    <h2 class="text-3xl text-white font-semibold "> BLOG</h2>
+    <p class="text-2xl text-[#807154] pt-3 font-semibold">LATEST ENTRIES  </p>
+    </div>
+    <div class="text-center mt-[-19px]">
+    <i   class="fa fa-bookmark text-xl text-[#807154] " style="font-size: 35px;"></i>
+    </div>
+    
+     <!-- do cards  -->
+    <div class="  pt-10 text-white  pb-20 w-full sm:flex  sm:gap-8  ">
+      <!-- div2 -->
+       <div class= "md:w-1/2">
+      <div class=" md:flex md:gap-9 w-full">
+     
+     <div><img class="w-[600px]" src="images/banner3-400x400.jpg" alt=""> </div>
+     <div>
+      <h2 class="text-sm font-semibold" >IMAGE POST</h2>
+      <p class="text-sm font-semibold text-[#807154] pb-3">May 5,2014 By scent</p>
+      <p class="text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab laborum minus asperiores itaque, veritatis delectus deserunt eius iure illo, non minima nisi ducimus ipsa fuga perferendis amet, error quos doloribus. Fuga repellendus minima cum et ex dolorem necessitatibus praesentium esse.</p>
+      <button class="text-white border-[#807154] border-2 px-6 py-2 mt-5 text-sm hover:border-white">Read More</button>
+     </div>
+      </div>
+    </div>
+      <!-- div 2 -->
+      <div class="md:w-1/2">
+        <div class="md:flex md:gap-9 w-full">
+         
+       <div><img class="w-[600px]" src="images/banner1-400x400.jpg" alt=""> </div>
+       <div>
+        <h2 class="text-sm font-semibold" >GALLERY POST</h2>
+        <p class="text-sm font-semibold text-[#807154] pb-3">May 5,2014 By scent</p>
+        <p class="text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab laborum minus asperiores itaque, veritatis delectus deserunt eius iure illo, non minima nisi ducimus ipsa fuga perferendis amet, error quos doloribus. Fuga repellendus minima cum et ex dolorem necessitatibus praesentium esse.</p>
+        <button class="text-white border-[#807154] border-2 px-6 py-2 mt-5 text-sm hover:border-white">Read More</button>
+       </div>
+        </div>
+    
+      </div>
+    
+    </div>
+    
+    
+     </div>
+    </div>
+
+  <!-- photo session -->
+  <div class="" style="background-image:linear-gradient(rgba(25, 0, 0, 0.7), rgba(0, 0, 5, 0.7), rgba(7, 8, 18, 0.7), rgba(0, 0, 0, 0.7)),   url(images/parallax2.jpg); background-position: center; background-repeat: no-repeat;  background-size: cover;">
+    <!--  -->
+    <div class="w-full pt-20">
+      <div class="w-[90%] 2xl:w-[60%]  mx-auto ">
+<div class="pt-20 pb-10 border-b-2 border-gray-600 w-[100%]  text-center ">
+
+<h2 class="text-5xl text-white font-semibold uppercase ">  photo sessions </h2>
+<p class="text-2xl text-[#807154] pt-3 font-semibold uppercase">Choose Your Option</p>
+</div>
+<div class="text-center mt-[-19px]">
+   <i   class="fa fa-camera text-xl text-[#807154] " style="font-size: 35px;"></i>
+  </div>
+
+   <div class="py-10 text-white text-center">
+    <p class="text-sm">Mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat perferendis esse soluta recusandae, optio, numquam fugit quia vel explicabo odit distinctio eius aperiam maxime neque rerum qui quis, nobis mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et? Repellat perferendis esse soluta recusandae, optio, numquam fugit quia vel explicabo odit distinctio eius aperiam maxime neque rerum qui quis, nobis mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et?</p>
+   </div>
+  
+  <!-- testimonials section 4 -->
+  <div class="w-full mt-20 pb-20">
+    
+<!-- w-[90%] 2xl:w-[60%]  mx-auto -->
+    <!-- <div class=" ">
+<div class="pt-20  pb-10 border-b-2 border-gray-600 w-[100%]  text-center ">
+
+<h2 class="text-3xl text-white font-semibold "> TESTIMONIALS</h2>
+<p class="text-2xl text-[#807154] pt-3 font-semibold">WHAT PEOPLE SAY ABOUT US </p>
+</div>
+<div class="text-center mt-[-19px]">
+ <i   class="fa fa-quote-right text-xl text-[#807154] " style="font-size: 35px;"></i>
+</div>
+
+ <div class="pt-10 text-white text-center pb-20">
+  <p class="text-sm">Mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat perferendis esse soluta recusandae, optio, numquam fugit quia vel explicabo odit distinctio eius aperiam maxime neque rerum qui quis, nobis mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et? Repellat perferendis esse soluta recusandae, optio, numquam fugit quia vel explicabo odit distinctio eius aperiam maxime neque rerum qui quis, nobis mollitia officia quasi accusamus itaque! Animi autem dolores reprehenderit sunt et?</p>
+  <p class="pt-5 text-sm text-gray-400">"Mary Collins, Director, Company Ltd".</p>
+  <button class="text-white border-[#807154] border-2 px-12 py-3  mt-10 text-xl hover:border-white">BUY THIS THEME</button>
+ </div>
+
+
+   </div> -->
+  </div> 
+
+<!--  -->
+     </div>
+    </div>
+    <!--  -->
+  </div>
+
+
+  <!-- last -->
+  <div class="" style="background-image:linear-gradient(rgba(25, 0, 0, 0.7), rgba(0, 0, 5, 0.7), rgba(7, 8, 18, 0.7), rgba(0, 0, 0, 0.7)),   url(images/parallax3.jpg); background-position: center; background-repeat: no-repeat;  background-size: cover;">
+    <!--  -->
+    <div class="w-full pt-20">
+      <div class="w-[90%] 2xl:w-[60%]  mx-auto ">
+<div class="pt-20 pb-10 border-b-2 border-gray-600 w-[100%]  text-center ">
+
+<h2 class="text-5xl text-white font-semibold uppercase ">  Stay In Touch </h2>
+<p class="text-2xl text-[#807154] pt-3 font-semibold uppercase">Don't Hesitate to Contact Us</p>
+</div>
+<div class="text-center mt-[-19px]">
+   <i   class="fa fa-envelope text-xl text-[#807154] " style="font-size: 35px;"></i>
+  </div>
+
+   <div class="py-10 text-white ">
+    <div class="lg:flex lg:justify-center ">
+   <form action="">
+    
+<div class="flex flex-col gap-3 lg:flex-row flex-wrap ">
+  <input  class="px-4 py-[8px] lg:px-16 bg-black"  type="text" placeholder="Email">
+  <input class="px-4 py-[8px] lg:px-16 bg-black" type="text" placeholder="Name">
+  <input  class="px-4 py-[8px] lg:px-16 bg-black"  type="text" placeholder="Subject">
+</div>
+<div class="pt-10">
+  <textarea class="w-[100%] bg-black px-4" rows="5"  id="">Message</textarea>
+</div>
+<div class="text-center py-10">
+<button class="uppercase border-2 border-white bg-[#807154] px-12 py-3">Submit</button></div>
+<div class="flex gap-3 justify-center flex-row ">
+  <i   class="fa fa-facebook text-xl text-white bg-[#807154] border-2  border-[#807154] rounded-[50px] px-5 py-3 " style="font-size: 35px;"></i>
+  <i   class="fa fa-twitter text-xl text-white bg-[#807154] border-2  border-[#807154] rounded-[50px] px-4 py-3" style="font-size: 35px;"></i>
+  <i   class="fa fa-whatsapp text-xl text-white bg-[#807154] border-2  border-[#807154] rounded-[50px] px-4 py-3 " style="font-size: 35px;"></i>
+  <i   class="fa fa-telegram text-xl text-white bg-[#807154] border-2  border-[#807154] rounded-[50px] px-3 py-3 " style="font-size: 35px;"></i>
+
+</div>
+   </form>
+  </div>
+  </div>
+  
+ 
+
+<!--  -->
+     </div>
+    </div>
+    <!--  -->
+  </div>
+  <div class="bg-black h-[80px] text-center text-white flex justify-center items-center">
+    <p >© 2014 Scent Model Agency</p>
+  </div>
+</body>
+</html>
+
+<!--  -->
